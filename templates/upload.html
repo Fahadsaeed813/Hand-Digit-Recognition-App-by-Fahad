@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Handwritten Digit Recognition</title>
+    <style>
+        /* Basic reset */
+        * {
+            margin: 0;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background: url('https://i.pinimg.com/564x/f0/75/be/f075be8d0625c7b8be38a1be572b4aa3.jpg') no-repeat center center fixed;
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            color: #fff;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            text-align: center;
+            color:#000000;
+        }
+
+        .centered-container {
+            background-color: rgba(255, 255, 255, 0.2);
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0px 8px 40px rgba(0, 0, 0, 0.3);
+            max-width: 400px;
+            text-align: center;
+            backdrop-filter: blur(15px);
+        }
+
+        label {
+            display: block;
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+            color: #000000;
+        }
+
+        input[type="file"] {
+            margin-bottom: 20px;
+            font-size: 1rem;
+            padding: 10px;
+            border-radius: 10px;
+            background-color: #3c3333;
+            border: 2px solid #4A90E2;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        button {
+            padding: 12px 24px;
+            font-size: 1.2rem;
+            background-color: #3c3333;
+            color: #ded5d5;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            width: 100%;
+        }
+
+        button:hover {
+            background-color: #3DD6A0;
+        }
+    </style>
+</head>
+<body>
+    <div class="centered-container">
+        <h1>Upload a Handwritten Digit Image</h1>
+        <form action="/" method="POST" enctype="multipart/form-data">
+            <label for="digit_image">Choose a digit image (.jpeg):</label>
+            <input type="file" id="digit_image" name="digit_image" accept="image/jpeg">
+            <button type="submit">Upload and Predict</button>
+        </form>
+    </div>
+</body>
+</html>
